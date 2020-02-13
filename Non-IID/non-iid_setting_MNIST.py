@@ -3,9 +3,10 @@ import torchvision.transforms as transforms
 
 def load_dataset():
 	# pass
-	trainset = dsets.MNIST(root = '/data/MNIST', train = True, transform = transforms.ToTensor(), download = True)
-	testset = dsets.MNIST(root = '/data/MNIST', train = False, transform = transforms.ToTensor(), download = True)
+	trainset = dsets.MNIST(root = './data', train = True, transform = transforms.ToTensor(), download = True)
+	testset = dsets.MNIST(root = './data', train = False, transform = transforms.ToTensor(), download = True)
 	return trainset, testset
+
 #non-iid setting@ each client has one class or two class
 def non-iid_setting(trainset, per_class):
 	# pass
